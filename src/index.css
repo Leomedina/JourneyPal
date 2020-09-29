@@ -1,6 +1,5 @@
 * {
   font-family: "Montserrat", sans-serif;
-  /* background-color: #ffc933; */
   background-color: #fff;
 }
 
@@ -32,10 +31,11 @@
 }
 
 .logo {
+  place-self: start;
   grid-area: logo;
 }
 
 .navlink {
-  place-self: center;
+  place-self: end;
   grid-area: navlink;
 }

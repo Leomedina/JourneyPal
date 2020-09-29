@@ -4,8 +4,8 @@ import './index.css';
 function NavLink() {
   return (
     <div className="navlink">
-      <p> Login </p>
-      <p> Signup </p>
+      <p> login </p>
+      <p> signup </p>
     </div >
   )
 };

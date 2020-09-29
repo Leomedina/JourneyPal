@@ -2,3 +2,9 @@
   font-size: 1.5rem;
   font-weight: 900;
 }
+
+@media only screen and (max-width: 600px) {
+  .logo-img {
+    display: none;
+  }
+}
