@@ -1,12 +1,15 @@
 import React from 'react';
-import JourneyForm from '../../components/JourneyForm'
+import JourneyForm from '../../components/JourneyForm';
+import Header from '../../components/Header';
 
 function Home() {
   return (
-    <>
-      <h1>Homepage</h1>
-      <JourneyForm />
-    </>
+    <div className="grid-container">
+      <Header />
+      <div className="body-container">
+        <JourneyForm />
+      </div>
+    </div>
   )
 
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './pages/Index';
+import 'normalize.css';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
