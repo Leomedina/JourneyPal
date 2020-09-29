@@ -1,0 +1,15 @@
+.navlink {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.navlink p {
+  display: inline;
+  padding: 0.8rem;
+}
+
+.navlink p:hover {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  cursor: pointer;
+}

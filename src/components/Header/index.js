@@ -4,7 +4,7 @@ import './index.css';
 function Header() {
   return (
     <div className="header">
-      <h1>Welcome to JourneyPal</h1>
+      <h1>start here, go anywhere</h1>
     </div>
   )
 };

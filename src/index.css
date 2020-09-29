@@ -1,17 +1,16 @@
 * {
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  background-color: #ffc933;
+  /* background-color: #ffc933; */
+  background-color: #fff;
 }
 
 .grid-container {
   display: grid;
-  /* margin: 32px; */
   height: 100vh;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 6fr 1fr;
   grid-template-areas:
+    ". logo navlink ."
     ". header header ."
     ". main main ."
     "footer footer footer footer";
@@ -23,7 +22,20 @@
 }
 
 .body-container {
-  /* place-self: center; */
+  place-self: center;
   grid-area: main;
-  border: 1px solid #000;
+}
+
+.footer {
+  place-self: center;
+  grid-area: footer;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.navlink {
+  place-self: center;
+  grid-area: navlink;
 }
