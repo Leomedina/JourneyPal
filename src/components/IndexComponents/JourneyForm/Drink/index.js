@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
 
-function DrinkForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
-  const [formData, setFormData] = useState(INITIAL_STATE);
+function DrinkForm() {
+  const [formData, setFormData] = useState({ "drink": "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData(data => ({
-      ...data,
       [name]: value
     }));
   };
@@ -15,7 +14,7 @@ function DrinkForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    setFormData(INITIAL_STATE);
+    setFormData({ "drink": "" });
   };
 
   return (
@@ -23,11 +22,12 @@ function DrinkForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
       onSubmit={handleSubmit}
     >
       <label>
-        Location:
+        Extra:
         <input
           type="text"
-          name='food'
-          value={formData.food}
+          name="drink"
+          placeholder="Cocktails, Coffee, Biscuits, etc"
+          value={formData.drink}
           onChange={handleChange}
         />
       </label>

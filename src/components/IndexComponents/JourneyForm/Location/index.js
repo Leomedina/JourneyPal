@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
 
-function LocationForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
-  const [formData, setFormData] = useState(INITIAL_STATE);
+function LocationForm() {
+  const [formData, setFormData] = useState({ "location": "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData(data => ({
-      ...data,
       [name]: value
     }));
   };
@@ -15,7 +14,7 @@ function LocationForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    setFormData(INITIAL_STATE);
+    setFormData({ "location": "" });
   };
 
   return (
@@ -26,7 +25,8 @@ function LocationForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }
         Location:
         <input
           type="text"
-          name='location'
+          name="location"
+          placeholder="NYC, Chicago, Nairobi, etc"
           value={formData.location}
           onChange={handleChange}
         />
