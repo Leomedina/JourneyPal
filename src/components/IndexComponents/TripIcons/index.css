@@ -1,0 +1,26 @@
+.form-state {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.emoji {
+  margin: 10px 50px;
+  width: 5%;
+}
+
+.active {
+  width: 9%;
+  border-bottom: 10px solid yellow;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-state {
+    /* align-items: center; */
+  }
+
+  .emoji {
+      width: 12%;
+  }
+}

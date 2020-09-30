@@ -5,7 +5,7 @@ function NavLink() {
   return (
     <div className="navlink">
       <p> login </p>
-      <p> signup </p>
+      <p> sign up </p>
     </div >
   )
 };

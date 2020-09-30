@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function JourneyForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
+function FoodForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } }) {
   const [formData, setFormData] = useState(INITIAL_STATE);
 
   const handleChange = (event) => {
@@ -19,9 +19,11 @@ function JourneyForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } })
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+    >
       <label>
-        Location:
+        Food:
         <input
           type="text"
           name='location'
@@ -34,4 +36,4 @@ function JourneyForm({ INITIAL_STATE = { location: '', Place: '', Extra: '' } })
   )
 };
 
-export default JourneyForm;
+export default FoodForm;

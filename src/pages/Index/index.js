@@ -1,5 +1,5 @@
 import React from 'react';
-import JourneyForm from '../../components/JourneyForm';
+import Journey from '../../components/IndexComponents/Journey';
 import Nav from '../../components/Nav/index';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -9,9 +9,7 @@ function Home() {
     <div className="grid-container">
       <Nav />
       <Header />
-      <div className="body-container">
-        <JourneyForm />
-      </div>
+      <Journey />
       <Footer />
     </div>
   )
