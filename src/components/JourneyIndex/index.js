@@ -7,6 +7,7 @@ function JourneyIndex() {
   const INITIAL_STATE = {
     "trip": true,
     "location": false,
+    "attraction": false,
     "food": false,
     "drink": false,
   }

@@ -5,6 +5,7 @@ function StartForm({ setTripState }) {
   const formStartedState = {
     "trip": false,
     "location": true,
+    "attraction": false,
     "food": false,
     "drink": false,
   };

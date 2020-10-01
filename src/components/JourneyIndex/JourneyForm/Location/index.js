@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-
+import React, { useState, } from 'react';
 
 function LocationForm({ setTripState }) {
   const [formData, setFormData] = useState({ "location": "" });
+
   const formLocationState = {
     "trip": false,
     "location": false,
-    "food": true,
+    "attraction": true,
+    "food": false,
     "drink": false,
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ [name]: value });
   };
 
   const handleSubmit = (event) => {
@@ -25,16 +21,18 @@ function LocationForm({ setTripState }) {
     <form
       onSubmit={handleSubmit}
     >
-      <label>
-        Location:
+      <p>
+        <label>
+          Location:
         <input
-          type="text"
-          name="location"
-          placeholder="NYC, Chicago, Nairobi, etc"
-          value={formData.location}
-          onChange={handleChange}
-        />
-      </label>
+            type="text"
+            name="location"
+            placeholder="NYC, Chicago, Nairobi, etc"
+            value={formData.location}
+            onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
+          />
+        </label>
+      </p>
       <p>
         <button>next</button>
       </p>

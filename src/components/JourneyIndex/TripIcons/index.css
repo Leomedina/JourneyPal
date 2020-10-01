@@ -6,12 +6,8 @@
 }
 
 .emoji {
-  margin: 10px 55px;
+  margin: 10px 50px;
   width: 4%;
-}
-
-.drink {
-  width: 6%;
 }
 
 .active {
@@ -20,8 +16,20 @@
   border-bottom: 7px solid yellow;
 }
 
+.drink {
+  width: 6%;
+}
+
 .drink.active {
-  width: 10%;
+  width: 9%;
+}
+
+.attraction {
+  width: 5%;
+}
+
+.attraction.active {
+  width: 8%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -30,11 +38,15 @@
     width: 30%;
   }
 
-  .drink {
+  .drink, .attraction {
     display: none;
   }
 
   .drink.active {
+    width: 40%;
+  }
+
+  .attraction.active {
     width: 40%;
   }
 

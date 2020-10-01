@@ -6,13 +6,9 @@ function FoodForm({ setTripState }) {
   const formFoodState = {
     "trip": false,
     "location": false,
+    "attraction": false,
     "food": false,
     "drink": true,
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ [name]: value });
   };
 
   const handleSubmit = (event) => {
@@ -25,16 +21,18 @@ function FoodForm({ setTripState }) {
     <form
       onSubmit={handleSubmit}
     >
-      <label>
-        Food:
+      <p>
+        <label>
+          Food:
         <input
-          type="text"
-          name="food"
-          placeholder="Burgers, Ramen, Pizza, etc"
-          value={formData.food}
-          onChange={handleChange}
-        />
-      </label>
+            type="text"
+            name="food"
+            placeholder="Burgers, Ramen, Pizza, etc"
+            value={formData.food}
+            onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
+          />
+        </label>
+      </p>
       <p>
         <button>next</button>
       </p>

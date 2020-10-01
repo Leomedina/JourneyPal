@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 
 
-function DrinkForm() {
-  const [formData, setFormData] = useState({ "drink": "" });
+function AttractionForm({ setTripState }) {
+  const [formData, setFormData] = useState({ "attraction": "" });
+  const formAttractionState = {
+    "trip": false,
+    "location": false,
+    "attraction": false,
+    "food": true,
+    "drink": false,
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
-    setFormData({ "drink": "" });
+    setTripState(formAttractionState);
+    setFormData({ "attraction": "" });
   };
 
   return (
@@ -16,18 +23,18 @@ function DrinkForm() {
     >
       <p>
         <label>
-          Extra:
+          Food:
         <input
             type="text"
-            name="drink"
-            placeholder="Cocktails, Beer, Coffee, etc"
-            value={formData.drink}
+            name="attraction"
+            placeholder="Museum, Theater, Park etc"
+            value={formData.attraction}
             onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
           />
         </label>
       </p>
       <p>
-        <button>submit</button>
+        <button>next</button>
       </p>
       <p>
         <img
@@ -40,4 +47,4 @@ function DrinkForm() {
   )
 };
 
-export default DrinkForm;
+export default AttractionForm;
