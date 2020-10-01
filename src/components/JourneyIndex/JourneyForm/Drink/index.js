@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import DispatchContext from "../../../../reducers/dispatchContext";
+import { addDrink } from "../../../../reducers/actions";
 
 
 function DrinkForm() {
   const [formData, setFormData] = useState({ "drink": "" });
+  const dispatch = useContext(DispatchContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    dispatch(addDrink(formData.drink));
     setFormData({ "drink": "" });
   };
 

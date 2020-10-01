@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import DispatchContext from "../../../../reducers/dispatchContext";
 import { formAttractionState } from '../../../../utilities/formStatesUtils';
+import { addAttraction } from "../../../../reducers/actions";
 
 
 function AttractionForm({ setTripState }) {
   const [formData, setFormData] = useState({ "attraction": "" });
+  const dispatch = useContext(DispatchContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setTripState(formAttractionState);
+    dispatch(addAttraction(formData.attraction));
     setFormData({ "attraction": "" });
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <p><label>Food:
+      <p><label>Attraction:
         <input
           type="text"
           name="attraction"

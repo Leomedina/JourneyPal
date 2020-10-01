@@ -1,12 +1,16 @@
-import React, { useState, } from 'react';
+import React, { useState, useContext } from 'react';
+import DispatchContext from "../../../../reducers/dispatchContext";
 import { formLocationState } from '../../../../utilities/formStatesUtils';
+import { addLocation } from "../../../../reducers/actions";
 
 function LocationForm({ setTripState }) {
   const [formData, setFormData] = useState({ "location": "" });
+  const dispatch = useContext(DispatchContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setTripState(formLocationState);
+    dispatch(addLocation(formData.location));
     setFormData({ "location": "" });
   };
 

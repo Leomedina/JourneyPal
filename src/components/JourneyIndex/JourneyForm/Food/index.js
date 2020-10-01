@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import DispatchContext from "../../../../reducers/dispatchContext";
 import { formFoodState } from '../../../../utilities/formStatesUtils';
+import { addFood } from "../../../../reducers/actions";
 
 function FoodForm({ setTripState }) {
   const [formData, setFormData] = useState({ "food": "" });
+  const dispatch = useContext(DispatchContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setTripState(formFoodState);
+    dispatch(addFood(formData.food));
     setFormData({ "food": "" });
   };
 
