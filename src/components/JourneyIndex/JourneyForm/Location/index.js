@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 
 
-function LocationForm() {
+function LocationForm({ setTripState }) {
   const [formData, setFormData] = useState({ "location": "" });
+  const formLocationState = {
+    "trip": false,
+    "location": false,
+    "food": true,
+    "drink": false,
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData(data => ({
-      [name]: value
-    }));
+    setFormData({ [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    setTripState(formLocationState);
     setFormData({ "location": "" });
   };
 
@@ -31,7 +35,9 @@ function LocationForm() {
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <p>
+        <button>next</button>
+      </p>
     </form >
   )
 };

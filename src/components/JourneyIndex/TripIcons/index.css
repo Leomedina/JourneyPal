@@ -10,17 +10,25 @@
   width: 5%;
 }
 
+.drink {
+  width: 8%;
+}
+
 .active {
   width: 9%;
   border-bottom: 10px solid yellow;
 }
 
+.drink.active {
+  width: 12%;
+}
+
 @media only screen and (max-width: 600px) {
-  .form-state {
-    /* align-items: center; */
+  .emoji {
+    width: 12%;
   }
 
-  .emoji {
-      width: 12%;
+  .drink {
+    width: 15%;
   }
 }

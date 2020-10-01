@@ -1,5 +1,5 @@
 import React from 'react';
-import Journey from '../../components/IndexComponents/Journey';
+import Journey from '../../components/JourneyIndex';
 import Nav from '../../components/Nav/index';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';

@@ -28,7 +28,7 @@
 }
 
 .form-state {
-  place-self: center;
+  place-self: end;
   grid-area: form-state;
 }
 

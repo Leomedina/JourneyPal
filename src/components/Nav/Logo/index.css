@@ -7,4 +7,8 @@
   .logo-img {
     display: none;
   }
+  .logo p {
+    font-weight: 500;
+  }
 }
+

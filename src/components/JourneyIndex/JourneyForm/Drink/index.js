@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 
 
-function FoodForm() {
-  const [formData, setFormData] = useState({ "food": "" });
+function DrinkForm() {
+  const [formData, setFormData] = useState({ "drink": "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData(data => ({
-      [name]: value
-    }));
+    setFormData({ [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    setFormData({ "food": "" });
+    setFormData({ "drink": "" });
   };
 
   return (
@@ -22,18 +20,20 @@ function FoodForm() {
       onSubmit={handleSubmit}
     >
       <label>
-        Food:
+        Extra:
         <input
           type="text"
-          name="food"
-          placeholder="Burgers, Ramen, Pizza, etc"
-          value={formData.food}
+          name="drink"
+          placeholder="Cocktails, Coffee, Biscuits, etc"
+          value={formData.drink}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+      <p>
+        <button>submit</button>
+      </p>
     </form >
   )
 };
 
-export default FoodForm;
+export default DrinkForm;

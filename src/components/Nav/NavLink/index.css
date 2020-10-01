@@ -9,7 +9,13 @@
 }
 
 .navlink p:hover {
-  text-decoration: underline;
-  text-decoration-color: yellow;
+  text-shadow: 2px 2px 0px yellow, -2px -2px 0px yellow, 2px -2px 0px yellow,
+    -2px 2px 0px yellow;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .navlink {
+    font-weight: 500;
+  }
 }

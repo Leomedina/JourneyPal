@@ -23,7 +23,7 @@ function TripIcons({ tripState }) {
       />
       <img
         src="https://i.imgur.com/Cv9oISF.png"
-        className={`emoji ${drink ? 'active' : 'notActive'}`}
+        className={`emoji ${drink ? 'active' : 'notActive'} drink`}
         alt="" />
     </div>
   );

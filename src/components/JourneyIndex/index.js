@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import JourneyForm from '../JourneyForm';
-import TripIcons from '../TripIcons'
+import JourneyForm from './JourneyForm';
+import TripIcons from './TripIcons'
+import './index.css';
 
-function Journey() {
+function JourneyIndex() {
   const INITIAL_STATE = {
     "trip": true,
     "location": false,
     "food": false,
-    "drink": false
+    "drink": false,
   }
   const [tripState, setTripState] = useState(INITIAL_STATE);
 
   return (
     <>
       <TripIcons tripState={tripState} />
-      <JourneyForm />
+      <JourneyForm tripState={tripState} setTripState={setTripState} />
     </>
   )
 };
 
 
-export default Journey;
+export default JourneyIndex;
