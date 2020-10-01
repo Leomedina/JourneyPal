@@ -6,38 +6,27 @@ function DrinkForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
     setFormData({ "drink": "" });
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-    >
-      <p>
-        <label>
-          Extra:
+    <form onSubmit={handleSubmit}>
+      <p><label>Extra:
         <input
-            type="text"
-            name="drink"
-            placeholder="Cocktails, Beer, Coffee, etc"
-            value={formData.drink}
-            onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
-          />
-        </label>
-      </p>
-      <p>
-        <button>submit</button>
-      </p>
-      <p>
-        <img
-          src="https://i.imgur.com/mHbnk9J.png"
-          className="emoji"
-          alt="plane emoji"
-        />
-      </p>
-    </form >
-  )
+          type="text"
+          name="drink"
+          placeholder="Cocktails, Beer, Coffee, etc"
+          value={formData.drink}
+          onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
+        /></label></p>
+      <p><button>submit</button></p>
+      <p><img
+        src="https://i.imgur.com/mHbnk9J.png"
+        className="emoji"
+        alt="plane emoji"
+      /></p>
+    </form>
+  );
 };
 
 export default DrinkForm;
