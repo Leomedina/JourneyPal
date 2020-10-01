@@ -11,6 +11,7 @@ button {
 
 form .emoji {
   margin: 50px;
+  justify-content: center;
   transform: scale(1.6);
 }
 
