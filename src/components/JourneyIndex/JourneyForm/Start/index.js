@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 function StartForm({ setTripState }) {
   const formStartedState = {
@@ -14,10 +15,14 @@ function StartForm({ setTripState }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-    >
+    <form onSubmit={handleSubmit} className="start-form">
       <button className="form-button">start</button>
+      <p>
+        <img
+          src="https://i.imgur.com/mHbnk9J.png"
+          className="emoji"
+        />
+      </p>
     </form >
   )
 };

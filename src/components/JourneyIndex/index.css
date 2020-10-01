@@ -1,11 +1,17 @@
 button {
   font-size: 40rem;
-  padding: 10px 30px;
-  font-weight: 900;
-  transform: scale(1.5);
+  padding: 8px 32px;
+  font-weight: 700;
+  transform: scale(1.4);
   border: none;
   border-radius: 50px;
   border: 3px solid black;
+  outline: none;
+}
+
+form .emoji {
+  margin: 50px;
+  transform: scale(1.6);
 }
 
 button:hover {
@@ -14,8 +20,17 @@ button:hover {
   border: 3px solid yellow;
 }
 
+p {
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
   button {
     transform: scale(1);
+  }
+
+  form .emoji {
+    display: none;
   }
 }

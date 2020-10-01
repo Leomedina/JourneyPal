@@ -24,13 +24,19 @@ function DrinkForm() {
         <input
           type="text"
           name="drink"
-          placeholder="Cocktails, Coffee, Biscuits, etc"
+          placeholder="Cocktails, Beer, Coffee, etc"
           value={formData.drink}
           onChange={handleChange}
         />
       </label>
       <p>
         <button>submit</button>
+      </p>
+      <p>
+        <img
+          src="https://i.imgur.com/mHbnk9J.png"
+          className="emoji"
+        />
       </p>
     </form >
   )

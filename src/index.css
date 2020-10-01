@@ -22,7 +22,7 @@
 }
 
 .form {
-  align-self: center;
+  align-self: flex-end;
   justify-self: center;
   grid-area: form;
 }
