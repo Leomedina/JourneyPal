@@ -40,5 +40,4 @@ function completeForm(state) {
   };
 };
 
-
 export { addLocation, addAttraction, addFood, addDrink, completeForm };

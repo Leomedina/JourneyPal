@@ -3,7 +3,6 @@ import DispatchContext from "../../../../reducers/dispatchContext";
 import { formAttractionState } from '../../../../utilities/formStatesUtils';
 import { addAttraction } from "../../../../reducers/actions";
 
-
 function AttractionForm({ setTripState }) {
   const [formData, setFormData] = useState({ "attraction": "" });
   const dispatch = useContext(DispatchContext);

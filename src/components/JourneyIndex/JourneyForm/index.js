@@ -16,7 +16,7 @@ function JourneyForm({ tripState, setTripState }) {
       {food ? <FoodForm setTripState={setTripState} /> : ""}
       {drink ? <DrinkForm setTripState={setTripState} /> : ""}
     </div>
-  )
+  );
 };
 
 export default JourneyForm;

@@ -17,7 +17,7 @@ function Footer() {
           <strong> here</strong></a>.
     </small>
     </div >
-  )
+  );
 };
 
 export default Footer;

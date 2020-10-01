@@ -8,7 +8,7 @@ function Nav() {
       <Logo />
       <NavLink />
     </>
-  )
+  );
 };
 
 export default Nav;

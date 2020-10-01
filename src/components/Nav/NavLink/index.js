@@ -7,7 +7,7 @@ function NavLink() {
       <p> login </p>
       <p> sign up </p>
     </div >
-  )
+  );
 };
 
 export default NavLink;

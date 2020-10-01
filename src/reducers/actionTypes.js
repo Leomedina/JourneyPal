@@ -4,7 +4,6 @@
  * 
  * */
 
-//ACTION TYPES for Trips
 export const ADD_LOCATION = "ADD_LOCATION";
 export const ADD_ATTRACTION = "ADD_ATTRACTION";
 export const ADD_FOOD = "ADD_FOOD";

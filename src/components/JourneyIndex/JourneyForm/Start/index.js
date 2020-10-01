@@ -18,7 +18,7 @@ function StartForm({ setTripState }) {
         alt="plane emoji"
       /></p>
     </form >
-  )
+  );
 };
 
 export default StartForm;

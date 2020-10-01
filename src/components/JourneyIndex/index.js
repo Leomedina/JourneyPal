@@ -18,8 +18,7 @@ function JourneyIndex() {
       <TripIcons tripState={tripState} />
       <JourneyForm tripState={tripState} setTripState={setTripState} />
     </>
-  )
+  );
 };
-
 
 export default JourneyIndex;

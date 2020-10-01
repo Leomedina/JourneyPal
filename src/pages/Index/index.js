@@ -12,8 +12,7 @@ function Home() {
       <Journey />
       <Footer />
     </div>
-  )
-
+  );
 };
 
 export default Home;

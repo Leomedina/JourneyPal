@@ -3,7 +3,6 @@ import DispatchContext from "../../../../reducers/dispatchContext";
 import tripContext from "../../../../reducers/tripContext";
 import { addDrink, completeForm } from "../../../../reducers/actions";
 
-
 function DrinkForm() {
   const [formData, setFormData] = useState({ "drink": "" });
   const dispatch = useContext(DispatchContext);

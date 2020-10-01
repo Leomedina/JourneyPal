@@ -33,7 +33,7 @@ function LocationForm({ setTripState }) {
         alt="plane emoji"
       /></p>
     </form >
-  )
+  );
 };
 
 export default LocationForm;

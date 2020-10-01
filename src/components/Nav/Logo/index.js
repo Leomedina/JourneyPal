@@ -6,7 +6,7 @@ function Logo() {
     <div className="logo">
       <p> <span className="logo-img"> - - - </span>JourneyPal<span className="logo-img"> - - - ✈</span></p>
     </div >
-  )
+  );
 };
 
 export default Logo;
