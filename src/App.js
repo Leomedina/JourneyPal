@@ -6,10 +6,20 @@ import Index from './pages/Index';
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, {
-    "location": "",
-    "attraction": "",
-    "food": "",
-    "drink": ""
+    "form": {
+      "location": "",
+      "attraction": "",
+      "food": "",
+      "drink": ""
+    },
+    "trip": {
+      "id": "",
+      "user_id": "",
+      "location": "",
+      "hero_venue": "",
+      "food_venue": "",
+      "last_venue": ""
+    }
   });
 
   return (

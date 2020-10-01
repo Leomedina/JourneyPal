@@ -17,14 +17,16 @@ function AttractionForm({ setTripState }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p><label>Attraction:
+      <p className="box">
+        <label htmlFor="attraction">What would you like to visit?</label>
         <input
           type="text"
           name="attraction"
           placeholder="Museum, Theater, Park etc"
           value={formData.attraction}
           onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
-        /></label></p>
+        />
+      </p>
       <p><button>next</button></p>
       <p><img
         src="https://i.imgur.com/mHbnk9J.png"

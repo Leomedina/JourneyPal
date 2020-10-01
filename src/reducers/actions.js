@@ -2,7 +2,7 @@ import {
   ADD_LOCATION,
   ADD_ATTRACTION,
   ADD_FOOD,
-  ADD_DRINK
+  ADD_DRINK, COMPLETE_FORM
 } from "./actionTypes";
 
 function addLocation(location) {
@@ -33,5 +33,12 @@ function addDrink(drink) {
   };
 };
 
+function completeForm(state) {
+  return {
+    type: COMPLETE_FORM,
+    state
+  };
+};
 
-export { addLocation, addAttraction, addFood, addDrink };
+
+export { addLocation, addAttraction, addFood, addDrink, completeForm };

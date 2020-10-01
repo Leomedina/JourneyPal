@@ -14,7 +14,7 @@ function StartForm({ setTripState }) {
       <button className="form-button">start</button>
       <p><img
         src="https://i.imgur.com/mHbnk9J.png"
-        className="emoji"
+        className="emoji start"
         alt="plane emoji"
       /></p>
     </form >
