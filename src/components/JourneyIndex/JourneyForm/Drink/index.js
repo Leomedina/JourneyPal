@@ -36,6 +36,7 @@ function DrinkForm() {
         <img
           src="https://i.imgur.com/mHbnk9J.png"
           className="emoji"
+          alt="plane emoji"
         />
       </p>
     </form >
