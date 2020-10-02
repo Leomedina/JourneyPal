@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
-import rootReducer from './reducers/rootReducer';
-import DispatchContext from "./reducers/dispatchContext";
-import TripContext from './reducers/tripContext';
+import rootReducer from './context/rootReducer';
+import DispatchContext from './context/dispatchContext';
+import TripContext from './context/tripContext';
 import Index from './pages/Index';
 
 function App() {

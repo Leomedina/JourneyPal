@@ -1,7 +1,8 @@
-import React, { useState, useContext } from 'react';
-import DispatchContext from "../../../../reducers/dispatchContext";
-import tripContext from "../../../../reducers/tripContext";
-import { addDrink, completeForm } from "../../../../reducers/actions";
+import React, { useState, useContext, useEffect } from 'react';
+import DispatchContext from "../../../../context/dispatchContext";
+import tripContext from "../../../../context/tripContext";
+import { addDrink, completeForm } from "../../../../context/actions";
+import { fetchData } from '../../../../utilities/fetchData';
 
 function DrinkForm() {
   const [formData, setFormData] = useState({ "drink": "" });
@@ -14,6 +15,11 @@ function DrinkForm() {
     dispatch(completeForm(state));
     setFormData({ "drink": "" });
   };
+  
+  useEffect(() => {
+    fetchData(state).then(result => console.log(result));
+  }, [state]);
+
 
   return (
     <form onSubmit={handleSubmit}>

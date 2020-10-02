@@ -1,5 +1,9 @@
 .start-form {
-  display:flex;
+  display: flex;
   flex-flow: column wrap;
   align-items: center;
+}
+
+.start-btn {
+  transform: scale(1.7);
 }

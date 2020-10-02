@@ -9,8 +9,10 @@
 }
 
 .footer a:hover {
-  text-shadow: 2px 2px 0px yellow, -2px -2px 0px yellow, 2px -2px 0px yellow,
-    -2px 2px 0px yellow;
   cursor: pointer;
   text-decoration: none;
+}
+
+.footer a:hover span {
+  background-color: yellow;
 }

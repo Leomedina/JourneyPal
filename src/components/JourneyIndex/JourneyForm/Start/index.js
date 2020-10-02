@@ -11,7 +11,7 @@ function StartForm({ setTripState }) {
 
   return (
     <form onSubmit={handleSubmit} className="start-form">
-      <button className="form-button">start</button>
+      <button className="form-button start-btn">start</button>
       <p><img
         src="https://i.imgur.com/mHbnk9J.png"
         className="emoji start"

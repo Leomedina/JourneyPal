@@ -9,9 +9,11 @@
 }
 
 .navlink p:hover {
-  text-shadow: 2px 2px 0px yellow, -2px -2px 0px yellow, 2px -2px 0px yellow,
-    -2px 2px 0px yellow;
   cursor: pointer;
+}
+
+.navlink p:hover span {
+  background-color: yellow;
 }
 
 @media only screen and (max-width: 600px) {

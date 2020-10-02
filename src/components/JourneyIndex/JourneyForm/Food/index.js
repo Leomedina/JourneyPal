@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import DispatchContext from "../../../../reducers/dispatchContext";
+import DispatchContext from "../../../../context/dispatchContext";
 import { formFoodState } from '../../../../utilities/formStatesUtils';
-import { addFood } from "../../../../reducers/actions";
+import { addFood } from "../../../../context/actions";
 
 function FoodForm({ setTripState }) {
   const [formData, setFormData] = useState({ "food": "" });

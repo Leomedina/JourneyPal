@@ -32,34 +32,6 @@
   width: 8%;
 }
 
-input {
-  border: none;
-  outline: none;
-  font-weight: 500;
-}
-
-input[type="text"] {
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border-bottom: 4px dashed yellow;
-  border-radius: 5px;
-}
-
-input::placeholder {
-  text-align: center;
-  font-weight: 500;
-}
-
-p.box {
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  padding: 2rem;
-}
-p {
-  font-weight: 700;
-  font-size: 1.3rem;
-}
 
 @media only screen and (max-width: 600px) {
   .emoji {

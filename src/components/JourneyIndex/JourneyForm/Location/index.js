@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import DispatchContext from "../../../../reducers/dispatchContext";
+import DispatchContext from "../../../../context/dispatchContext";
 import { formLocationState } from '../../../../utilities/formStatesUtils';
-import { addLocation } from "../../../../reducers/actions";
+import { addLocation } from "../../../../context/actions";
 
 function LocationForm({ setTripState }) {
   const [formData, setFormData] = useState({ "location": "" });

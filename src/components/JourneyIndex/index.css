@@ -30,6 +30,35 @@ button:hover {
 p {
   display: flex;
   justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+p.box {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 2rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-bottom: 4px dashed black;
+  border-radius: 5px;
+  background-color: yellow;
+}
+
+input::placeholder {
+  text-align: center;
+  color: #626567;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {

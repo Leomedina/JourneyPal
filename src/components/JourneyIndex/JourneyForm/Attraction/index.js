@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import DispatchContext from "../../../../reducers/dispatchContext";
+import DispatchContext from "../../../../context/dispatchContext";
 import { formAttractionState } from '../../../../utilities/formStatesUtils';
-import { addAttraction } from "../../../../reducers/actions";
+import { addAttraction } from "../../../../context/actions";
 
 function AttractionForm({ setTripState }) {
   const [formData, setFormData] = useState({ "attraction": "" });
@@ -17,7 +17,7 @@ function AttractionForm({ setTripState }) {
   return (
     <form onSubmit={handleSubmit}>
       <p className="box">
-        <label htmlFor="attraction">What would you like to visit?</label>
+        <label htmlFor="attraction">What would you like to see?</label>
         <input
           type="text"
           name="attraction"
