@@ -1,8 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import DispatchContext from "../../../../context/dispatchContext";
 import tripContext from "../../../../context/tripContext";
 import { addDrink, completeForm } from "../../../../context/actions";
-import { fetchData } from '../../../../utilities/fetchData';
+import { getAPIData } from '../../../../utilities/getAPIData';
+// import { useAsync } from '../../../../hooks/useAsync';
 
 function DrinkForm() {
   const [formData, setFormData] = useState({ "drink": "" });
@@ -13,13 +14,14 @@ function DrinkForm() {
     event.preventDefault();
     dispatch(addDrink(formData.drink));
     dispatch(completeForm(state));
+    fetchData(state)
     setFormData({ "drink": "" });
   };
-  
-  useEffect(() => {
-    fetchData(state).then(result => console.log(result));
-  }, [state]);
 
+  async function fetchData(state) {
+    const res = await getAPIData(state);
+    console.log(res);
+  }
 
   return (
     <form onSubmit={handleSubmit}>
