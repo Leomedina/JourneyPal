@@ -3,9 +3,12 @@ import axios from 'axios';
 export async function getAPIData(state) {
   try {
     const response = await axios({
-      url: "https://journeypalapi.herokuapp.com/api/venue",
-      method: "GET",
-      data: {
+      url: "http://localhost:3005/api/venue",
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: {
         "location": state.form.location,
         "category": state.form.attraction
       }
