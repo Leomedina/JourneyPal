@@ -3,7 +3,7 @@ import axios from 'axios';
 export async function getVenueData(state) {
   try {
     const response = await axios({
-      url: "http://journeypalapi.herokuapp.com/api/venue",
+      url: "https://journeypalapi.herokuapp.com/api/venue",
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ export async function getVenueData(state) {
 export async function getFoodData(venue) {
   try {
     const response = await axios({
-      url: "http://journeypalapi.herokuapp.com/api/eat",
+      url: "https://journeypalapi.herokuapp.com/api/eat",
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export async function getFoodData(venue) {
 export async function getDrinkData(state, category) {
   try {
     const response = await axios({
-      url: "http://journeypalapi.herokuapp.com/api/venue",
+      url: "https://journeypalapi.herokuapp.com/api/venue",
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
