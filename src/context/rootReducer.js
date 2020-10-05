@@ -43,6 +43,7 @@ function rootReducer(state, action) {
           hero_venue: action.venue
         }
       };
+
     case t.ADD_FOOD_VENUE:
       return {
         ...state,

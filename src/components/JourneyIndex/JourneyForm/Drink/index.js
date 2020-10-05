@@ -14,19 +14,17 @@ function DrinkForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(a.addDrink(formData.drink));
-    dispatch(a.completeForm(state));
-    handleData(state)
-    setFormData({ "drink": "" });
+    handleData(state);
     history.push("/trip");
   };
 
   async function handleData(state) {
     const venue = await getVenueData(state);
     const food = await getFoodData(venue[0]);
-    const drink = await getDrinkData(state);
+    const drink = await getDrinkData(state, formData.drink);
     dispatch(a.addHeroLocation(venue[0]));
     dispatch(a.addFoodLocation(food[0]));
-    dispatch(a.addLastVenue(drink));
+    dispatch(a.addLastVenue(drink[0]));
     dispatch(a.addTripLocation(state.form.location));
   }
 

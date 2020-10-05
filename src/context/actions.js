@@ -1,6 +1,6 @@
 import {
   ADD_LOCATION, ADD_ATTRACTION, ADD_FOOD,
-  ADD_DRINK, COMPLETE_FORM, ADD_HERO_LOCATION,
+  ADD_DRINK, ADD_HERO_LOCATION,
   ADD_TRIP_LOCATION, ADD_FOOD_VENUE, ADD_LAST_VENUE
 } from "./actionTypes";
 
@@ -32,13 +32,6 @@ function addDrink(drink) {
   };
 };
 
-function completeForm(state) {
-  return {
-    type: COMPLETE_FORM,
-    state
-  };
-};
-
 function addHeroLocation(venue) {
   return {
     type: ADD_HERO_LOCATION,
@@ -52,7 +45,6 @@ function addTripLocation(location) {
     location,
   };
 };
-
 
 function addFoodLocation(food) {
   return {
@@ -70,6 +62,6 @@ function addLastVenue(venue) {
 
 export {
   addLocation, addAttraction, addFood,
-  addDrink, completeForm, addHeroLocation,
+  addDrink, addHeroLocation,
   addTripLocation, addFoodLocation, addLastVenue
 };

@@ -39,7 +39,7 @@ export async function getFoodData(venue) {
   }
 }
 
-export async function getDrinkData(state) {
+export async function getDrinkData(state, category) {
   try {
     const response = await axios({
       url: "http://journeypalapi.herokuapp.com/api/venue",
@@ -49,7 +49,7 @@ export async function getDrinkData(state) {
       },
       data: {
         "location": state.form.location,
-        "category": state.form.drink
+        "category": category
       }
     });
     return response.data;
