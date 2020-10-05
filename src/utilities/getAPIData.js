@@ -8,7 +8,7 @@ export async function getAPIData(state) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: {
+      data: {
         "location": state.form.location,
         "category": state.form.attraction
       }
