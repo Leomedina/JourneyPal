@@ -22,7 +22,7 @@ function FoodForm({ setTripState }) {
           required
           type="text"
           name="food"
-          placeholder="Burgers, Ramen, Pizza, etc"
+          placeholder="Burgers, Ramen, Pizza, etc."
           value={formData.food}
           onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
         />

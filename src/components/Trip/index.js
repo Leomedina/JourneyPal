@@ -19,8 +19,8 @@ function Trip() {
       <TripIcons tripState={TRIP_STATE} />
       <div className="trip">
         <h1>In <span>{location ? location : "loading..."},</span></h1>
-        <h1>you'll enjoy <span>{hero_venue.venue_name ? hero_venue.venue_name : "loading..."}</span></h1>
-        <h1>Make sure to grab some food nearby at <span>{food_venue.venue_name ? food_venue.venue_name : "loading..."}</span></h1>
+        <h1>you'll enjoy <span>{hero_venue.venue_name ? hero_venue.venue_name : "loading..."}.</span></h1>
+        <h1>Make sure to grab some food nearby at <span>{food_venue.venue_name ? food_venue.venue_name : "loading..."}.</span></h1>
         <h1>Lastly, why not try <span>{last_venue.venue_name ? last_venue.venue_name : "loading..."}.</span></h1>
       </div>
       <p><img

@@ -22,7 +22,7 @@ function AttractionForm({ setTripState }) {
           required
           type="text"
           name="attraction"
-          placeholder="Museum, Theater, Park etc"
+          placeholder="Museum, Theater, Park etc."
           value={formData.attraction}
           onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
         />

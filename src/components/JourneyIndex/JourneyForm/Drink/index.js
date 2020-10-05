@@ -36,7 +36,7 @@ function DrinkForm() {
           required
           type="text"
           name="drink"
-          placeholder="Beer, Riverfront, Baseball Park, etc"
+          placeholder="Beer, Riverfront, Baseball Park, etc."
           value={formData.drink}
           onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
         />

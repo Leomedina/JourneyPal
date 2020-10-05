@@ -22,7 +22,7 @@ function LocationForm({ setTripState }) {
           required
           type="text"
           name="location"
-          placeholder="NYC, Chicago, Nairobi, etc"
+          placeholder="NYC, Chicago, Nairobi, etc."
           value={formData.location}
           onChange={({ target }) => { setFormData({ [target.name]: target.value }) }}
         />
