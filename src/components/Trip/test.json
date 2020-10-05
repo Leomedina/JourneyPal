@@ -1,0 +1,27 @@
+{
+  "value": {
+    "form": "{attraction: \"Theater\", drink: \"Beer\", food: \"Burge…}",
+    "trip": {
+      "id": "",
+      "user_id": "",
+      "location": "Chicago",
+      "hero_venue": {
+        "venue_id": "4aa05f40f964a520643f20e3",
+        "venue_name": "The Chicago Theatre",
+        "venue_location": "{address: \"175 N State St\", cc: \"US\", city: \"Chicag…}",
+        "category": "[{…}]"
+      },
+      "food_venue": {
+        "venue_id": "51c308c7498e369787203cfe",
+        "venue_name": "Chick-fil-A",
+        "venue_location": "{address: \"177 N State St Lbby 1A\", cc: \"US\", city:…}",
+        "category": "[{…}]"
+      },
+      "last_venue": {
+        "status": 500,
+        "message": "error is not defined"
+      }
+    }
+  },
+  "children": "<Routes />"
+}

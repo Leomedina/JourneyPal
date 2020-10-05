@@ -3,6 +3,21 @@
   font-weight: 500;
 }
 
+.logo p:hover {
+  cursor: pointer;
+}
+
+.logo p:hover,
+.logo p:hover span {
+  background-color: yellow;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 600px) {
   .logo-img {
     display: none;

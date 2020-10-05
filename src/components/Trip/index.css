@@ -1,3 +1,10 @@
 .trip {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
 
+h1 span {
+border-bottom: 6px dashed yellow;
 }
