@@ -19,6 +19,7 @@ function AttractionForm({ setTripState }) {
       <p className="box">
         <label htmlFor="attraction">What would you like to see?</label>
         <input
+          required
           type="text"
           name="attraction"
           placeholder="Museum, Theater, Park etc"

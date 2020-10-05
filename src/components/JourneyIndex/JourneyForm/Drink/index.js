@@ -33,6 +33,7 @@ function DrinkForm() {
       <p className="box">
         <label htmlFor="drink">Anything else you'd like to do?</label>
         <input
+          required
           type="text"
           name="drink"
           placeholder="Beer, Riverfront, Baseball Park, etc"

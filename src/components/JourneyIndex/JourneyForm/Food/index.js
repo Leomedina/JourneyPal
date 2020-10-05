@@ -19,6 +19,7 @@ function FoodForm({ setTripState }) {
       <p className="box">
         <label htmlFor="food">What would you like to eat?</label>
         <input
+          required
           type="text"
           name="food"
           placeholder="Burgers, Ramen, Pizza, etc"

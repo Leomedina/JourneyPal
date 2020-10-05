@@ -19,6 +19,7 @@ function LocationForm({ setTripState }) {
       <p className="box">
         <label htmlFor="location">Where would you like to visit?</label>
         <input
+          required
           type="text"
           name="location"
           placeholder="NYC, Chicago, Nairobi, etc"
