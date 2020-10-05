@@ -16,6 +16,16 @@
     "footer footer footer footer";
 }
 
+.trip-icons {
+  place-self: center;
+  grid-area: form-state;
+}
+
+.trip {
+  place-self: center;
+  grid-area: form;
+}
+
 .header {
   place-self: center;
   grid-area: header;

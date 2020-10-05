@@ -34,6 +34,39 @@ function rootReducer(state, action) {
           drink: action.drink
         }
       };
+
+    case t.ADD_HERO_LOCATION:
+      return {
+        ...state,
+        trip: {
+          ...state.trip,
+          hero_venue: action.venue
+        }
+      };
+    case t.ADD_FOOD_VENUE:
+      return {
+        ...state,
+        trip: {
+          ...state.trip,
+          food_venue: action.food
+        }
+      };
+    case t.ADD_LAST_VENUE:
+      return {
+        ...state,
+        trip: {
+          ...state.trip,
+          last_venue: action.venue
+        }
+      };
+    case t.ADD_TRIP_LOCATION:
+      return {
+        ...state,
+        trip: {
+          ...state.trip,
+          location: action.location
+        }
+      };
     default:
       return state;
   };

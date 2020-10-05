@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import DispatchContext from "../../../../context/dispatchContext";
 import tripContext from "../../../../context/tripContext";
-import { addDrink, completeForm } from "../../../../context/actions";
+import * as a from "../../../../context/actions";
 import { getVenueData, getFoodData, getDrinkData } from '../../../../utilities/getAPIData';
 import { useHistory } from 'react-router-dom';
 
@@ -13,8 +13,8 @@ function DrinkForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addDrink(formData.drink));
-    dispatch(completeForm(state));
+    dispatch(a.addDrink(formData.drink));
+    dispatch(a.completeForm(state));
     handleData(state)
     setFormData({ "drink": "" });
     history.push("/trip");
@@ -22,11 +22,12 @@ function DrinkForm() {
 
   async function handleData(state) {
     const venue = await getVenueData(state);
-    const food = await getFoodData(venue[1]);
+    const food = await getFoodData(venue[0]);
     const drink = await getDrinkData(state);
-    console.log(venue)
-    console.log(food)
-    console.log(drink)
+    dispatch(a.addHeroLocation(venue[0]));
+    dispatch(a.addFoodLocation(food[0]));
+    dispatch(a.addLastVenue(drink));
+    dispatch(a.addTripLocation(state.form.location));
   }
 
   return (

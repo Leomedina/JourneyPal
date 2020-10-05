@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
 
-function Header() {
+function Header({ message = "start here, go anywhere" }) {
   return (
     <div className="header">
-      <h1>start here, go anywhere</h1>
+      <h1>{message}</h1>
     </div>
   );
 };

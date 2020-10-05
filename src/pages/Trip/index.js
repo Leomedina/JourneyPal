@@ -1,9 +1,16 @@
 import React from 'react';
+import Nav from '../../components/Nav/index';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Trip from '../../components/Trip';
 
 function Home() {
   return (
     <div className="grid-container">
-      <h1>You want your freedom</h1>
+      <Nav />
+      <Header message="enjoy your trip!" />
+      <Trip />
+      <Footer />
     </div>
   );
 };

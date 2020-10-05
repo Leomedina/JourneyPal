@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import JourneyForm from './JourneyForm';
-import TripIcons from './TripIcons'
+import TripIcons from '../TripIcons'
 import './index.css';
 
 function JourneyIndex() {
