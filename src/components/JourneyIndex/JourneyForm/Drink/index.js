@@ -2,25 +2,31 @@ import React, { useState, useContext } from 'react';
 import DispatchContext from "../../../../context/dispatchContext";
 import tripContext from "../../../../context/tripContext";
 import { addDrink, completeForm } from "../../../../context/actions";
-import { getAPIData } from '../../../../utilities/getAPIData';
-// import { useAsync } from '../../../../hooks/useAsync';
+import { getVenueData, getFoodData, getDrinkData } from '../../../../utilities/getAPIData';
+import { useHistory } from 'react-router-dom';
 
 function DrinkForm() {
   const [formData, setFormData] = useState({ "drink": "" });
   const dispatch = useContext(DispatchContext);
   const state = useContext(tripContext);
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addDrink(formData.drink));
     dispatch(completeForm(state));
-    fetchData(state)
+    handleData(state)
     setFormData({ "drink": "" });
+    history.push("/trip");
   };
 
-  async function fetchData(state) {
-    const res = await getAPIData(state);
-    console.log(res);
+  async function handleData(state) {
+    const venue = await getVenueData(state);
+    const food = await getFoodData(venue[1]);
+    const drink = await getDrinkData(state);
+    console.log(venue)
+    console.log(food)
+    console.log(drink)
   }
 
   return (

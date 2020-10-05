@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import rootReducer from './context/rootReducer';
 import DispatchContext from './context/dispatchContext';
 import TripContext from './context/tripContext';
-import Index from './pages/Index';
+import Routes from './Routes';
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, {
@@ -26,7 +26,7 @@ function App() {
     <>
       <DispatchContext.Provider value={dispatch}>
         <TripContext.Provider value={state}>
-          <Index />
+          <Routes />
         </TripContext.Provider>
       </DispatchContext.Provider>
     </>
