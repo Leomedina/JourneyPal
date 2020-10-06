@@ -66,7 +66,6 @@ input::placeholder {
   }
 
   form .emoji.start {
-    width: 10%;
-    display: block;
+    display: none;
   }
 }
