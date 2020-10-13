@@ -4,6 +4,7 @@ import DispatchContext from './context/dispatchContext';
 import TripContext from './context/tripContext';
 import Routes from './Routes';
 
+
 function App() {
   const [state, dispatch] = useReducer(rootReducer, {
     "form": {

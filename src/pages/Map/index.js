@@ -7,7 +7,7 @@ import MapWrapper from '../../components/MapWrapper';
 function MapPage() {
 
   return (
-    <div className="map-grid-container">
+    <div className="grid-container">
       <Nav />
       <MapWrapper />
       <Footer />

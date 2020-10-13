@@ -23,7 +23,7 @@ function DrinkForm() {
     const food = await getFoodData(venue[0]);
     const drink = await getDrinkData(state, formData.drink);
     dispatch(a.addHeroLocation(venue[0]));
-    dispatch(a.addFoodLocation(food[0]));
+    dispatch(a.addFoodLocation(food[1]));
     dispatch(a.addLastVenue(drink[0]));
     dispatch(a.addTripLocation(state.form.location));
   }

@@ -17,10 +17,6 @@ function Trip() {
     "drink": false,
   }
 
-  const handleClick = () => {
-    history.push('/map');
-  }
-
   return (
     <div className="trip-icons">
       <TripIcons tripState={TRIP_STATE} />
@@ -30,15 +26,6 @@ function Trip() {
         <h1>Make sure to grab some food nearby at <span>{food_venue.venue_name ? food_venue.venue_name : "loading..."}.</span></h1>
         <h1>Lastly, why not try <span>{last_venue.venue_name ? last_venue.venue_name : "loading..."}.</span></h1>
       </div>
-      <p>
-        <img
-          src="https://i.imgur.com/mHbnk9J.png"
-          className={`emoji start ${hero_venue.venue_name ? "ready" : ""}`}
-          alt="plane emoji"
-          onClick={handleClick}
-        />
-      </p>
-
     </div >
   );
 };

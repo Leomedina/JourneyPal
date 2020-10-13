@@ -1,5 +1,7 @@
 .leaflet-container {
-  display:flex;
-  flex-flow: column wrap;
-  grid-area: body;
+  border: 5px solid black;
+  place-self: center;
+  grid-area: form;
+  height:  70vh;
+  width: 100%;
 }
