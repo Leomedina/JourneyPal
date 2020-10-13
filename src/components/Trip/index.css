@@ -9,6 +9,11 @@ h1 span {
   border-bottom: 6px dashed yellow;
 }
 
+.map-icon {
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
   .trip {
     display: block;
