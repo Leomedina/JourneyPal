@@ -56,3 +56,8 @@
   place-self: end;
   grid-area: navlink;
 }
+
+.leaflet-container {
+  place-self: center;
+  grid-area: form;
+}

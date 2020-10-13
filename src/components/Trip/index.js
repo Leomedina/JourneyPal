@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import TripIcons from '../TripIcons';
 import tripContext from "../../context/tripContext";
 import './index.css';
+import MapWrapper from './MapWrapper';
 
 function Trip() {
   const state = useContext(tripContext);
@@ -23,11 +24,7 @@ function Trip() {
         <h1>Make sure to grab some food nearby at <span>{food_venue.venue_name ? food_venue.venue_name : "loading..."}.</span></h1>
         <h1>Lastly, why not try <span>{last_venue.venue_name ? last_venue.venue_name : "loading..."}.</span></h1>
       </div>
-      <p><img
-        src="https://i.imgur.com/mHbnk9J.png"
-        className="emoji start"
-        alt="plane emoji"
-      /></p>
+      <MapWrapper location={location} />
     </div >
   );
 };
